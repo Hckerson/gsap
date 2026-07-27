@@ -291,3 +291,75 @@
         transition-duration: 1ms !important;
     }
 }
+
+/* ============================================
+   BRUTAL THEME — editorial, paper + ink + vermillion
+   Overrides the token ramp for any subtree tagged .brutal
+   ============================================ */
+
+.brutal {
+    --colors-primary: #f0ede6;
+    --colors-primary-dark: #e4e0d6;
+    --colors-primary-light: #ffffff;
+
+    --colors-accent: #ff3b2f;
+    --colors-accent-dark: #d92b20;
+    --colors-accent-light: #ffe6e3;
+
+    --colors-highlight: #ff3b2f;
+    --colors-highlight-dark: #d92b20;
+    --colors-highlight-light: #ffe6e3;
+
+    --colors-success: #157347;
+    --colors-warning: #9a6700;
+    --colors-error: #d92b20;
+    --colors-info: #1b4ba3;
+
+    --colors-background: #f0ede6;
+    --colors-background-alt: #e8e4da;
+    --colors-background-muted: #ded9cc;
+
+    --colors-text: #0b0b0a;
+    --colors-text-secondary: #46443d;
+    --colors-text-muted: #8b887d;
+    --colors-text-inverse: #f0ede6;
+
+    --colors-border: #0b0b0a;
+    --colors-border-light: #cdc8bb;
+    --colors-border-dark: #0b0b0a;
+
+    --colors-overlay: rgba(11, 11, 10, 0.6);
+
+    --brutal-grid-line: rgba(11, 11, 10, 0.08);
+
+    --radii-none: 0;
+    --radii-xs: 0;
+    --radii-sm: 0;
+    --radii-md: 0;
+    --radii-lg: 0;
+    --radii-xl: 0;
+    --radii-full: 9999px;
+
+    --shadows-sm: 2px 2px 0 var(--colors-text);
+    --shadows-md: 4px 4px 0 var(--colors-text);
+    --shadows-lg: 6px 6px 0 var(--colors-text);
+    --shadows-xl: 8px 8px 0 var(--colors-text);
+    --shadows-2xl: 10px 10px 0 var(--colors-text);
+}
+
+.brutal-invert {
+    --colors-background: #0b0b0a;
+    --colors-background-alt: #131311;
+    --colors-background-muted: #1c1b18;
+
+    --colors-text: #f0ede6;
+    --colors-text-secondary: #b8b4a8;
+    --colors-text-muted: #7d7a6f;
+    --colors-text-inverse: #0b0b0a;
+
+    --colors-border: #f0ede6;
+    --colors-border-light: #3a3833;
+    --colors-border-dark: #f0ede6;
+
+    --brutal-grid-line: rgba(240, 237, 230, 0.09);
+}

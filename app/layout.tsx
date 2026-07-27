@@ -7,12 +7,13 @@ export const viewport: Viewport = {
     width: "device-width",
     initialScale: 1,
     colorScheme: "light",
-    themeColor: "#ffffff",
+    themeColor: "#f0ede6",
 };
 
 export const metadata: Metadata = {
-    title: "Next.js App Router Starter",
-    description: "Opinionated Next.js starter with layered architecture",
+    title: "Oblique — Independent design & motion studio",
+    description:
+        "Oblique builds brand identities, interfaces, and motion systems for teams who treat movement as meaning.",
 };
 
 export default function RootLayout({
