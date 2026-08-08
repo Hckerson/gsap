@@ -1,13 +1,20 @@
+"use client";
 import Image from "next/image";
+import { useRef } from "react";
 import SectionLabel from "@/components/sections/site/section-label";
 import { anim, GSAP } from "@/lib/site/gsap";
+import { useWorkScroll } from "@/lib/hooks/use-work-scroll";
 import { sectionId, workProjects } from "@/lib/site/constants";
 
 export default function SelectedWork() {
+    const root = useRef<HTMLElement | null>(null);
+    useWorkScroll(root);
+
     return (
         <section
             id={sectionId.work}
             {...anim(GSAP.hScroll)}
+            ref={root}
             className="border-text border-b-2 py-20 lg:py-28"
         >
             <div className="mx-auto max-w-[1600px] px-6 lg:px-10">

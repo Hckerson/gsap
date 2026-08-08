@@ -27,6 +27,14 @@ const effects: Effects[] = [
                 ...config,
             }),
     },
+    {
+        name: "rotate",
+        defaults: { duration: 1, rotation: 360 },
+        effect: (targets, config) =>
+            gsap.to(targets, {
+                ...config,
+            }),
+    },
 ];
 
 export default effects;

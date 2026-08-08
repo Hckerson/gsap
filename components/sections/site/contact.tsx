@@ -1,6 +1,10 @@
+"use client";
+import { useRef } from "react";
 import SectionLabel from "@/components/sections/site/section-label";
 import BrutalButton from "@/components/ui/brutal-button";
 import { anim, GSAP } from "@/lib/site/gsap";
+import { useScrollReveal } from "@/lib/hooks/use-scroll-reveal";
+import { useMagnetic } from "@/lib/hooks/use-magnetic";
 import {
     contactCopy,
     contactEmail,
@@ -9,9 +13,14 @@ import {
 } from "@/lib/site/constants";
 
 export default function Contact() {
+    const root = useRef<HTMLElement | null>(null);
+    useScrollReveal(root);
+    useMagnetic(root);
+
     return (
         <section
             id={sectionId.contact}
+            ref={root}
             className="brutal-invert border-text border-b-2 py-24 lg:py-36"
         >
             <div className="mx-auto max-w-[1600px] px-6 lg:px-10">
