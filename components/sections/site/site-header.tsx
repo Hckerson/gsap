@@ -1,13 +1,22 @@
+"use client";
 import Link from "next/link";
+import { useRef } from "react";
 import Wordmark from "@/components/sections/site/wordmark";
 import BrutalButton from "@/components/ui/brutal-button";
 import { anim, GSAP } from "@/lib/site/gsap";
+import { useSiteNav } from "@/lib/hooks/use-site-nav";
+import { useMagnetic } from "@/lib/hooks/use-magnetic";
 import { navLinks, primaryCta, sectionId } from "@/lib/site/constants";
 
 export default function SiteHeader() {
+    const root = useRef<HTMLElement | null>(null);
+    useSiteNav(root);
+    useMagnetic(root);
+
     return (
         <header
             {...anim(GSAP.nav)}
+            ref={root}
             className="border-text bg-background/80 fixed inset-x-0 top-0 z-50 border-b-2 backdrop-blur-md"
         >
             <div className="mx-auto flex h-16 max-w-[1600px] items-center justify-between px-6 lg:px-10">

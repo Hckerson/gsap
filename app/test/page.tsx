@@ -8,22 +8,35 @@ gsap.registerPlugin(useGSAP);
 export default function TestPage() {
     const container = useRef<HTMLDivElement | null>(null);
     const tl = useRef<gsap.core.Timeline | null>(null);
+
     useGSAP(
         () => {
             tl.current = gsap
-                .timeline({ defaults: { duration: 1 } })
-                .slide(".box", { duration: 1 })
-                .to(".boxy", { duration: 1, x: 100, opacity: 0.5 });
+                .timeline({
+                    scrollTrigger: {
+                        trigger: ".bank",
+                        // pin: true,
+                        start: "top center",
+                        end: "+=500",
+                        scrub: 1,
+                        markers: true,
+                        snap: 0.01,
+                    },
+                })
+                .to(".box", {
+                    rotate: 360,
+                });
         },
         { scope: container },
     );
+
     return (
-        <div
-            ref={container}
-            className="flex h-screen w-full flex-col items-center justify-center bg-black"
-        >
-            <div className="from box size-10 rounded-lg bg-green-300 bg-linear-to-br to-green-500"></div>
-            <div className="from boxy size-10 rounded-lg bg-sky-300 bg-linear-to-br to-sky-500"></div>
+        <div ref={container} className="w-full bg-black">
+            <div className="h-screen" />
+            <div className="bank flex h-150 w-full items-center justify-center bg-white">
+                <div className="box size-50 bg-linear-to-br from-purple-400 to-pink-600" />
+            </div>
+            <div className="h-screen" />
         </div>
     );
 }
