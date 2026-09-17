@@ -110,7 +110,7 @@ The type scale is **marketing-grade** (`text-h1` 72px · `text-h2` 56px · `text
 1. Restate what's being built + where it lands (`components/ui/*` for primitives, `components/sections/*` / `components/patterns/*` / route `page.tsx` for composed UI).
 2. Sketch the decomposition (shell + named parts) and the typed data shape.
 3. Build it in house tokens per the rules above. Reuse existing primitives; build missing ones to the house standard.
-4. Self-check against **Anti-patterns**, then run `pnpm type-check` / lint if available.
+4. Self-check against **Anti-patterns**.
 
 ## Upgrade workflow
 
