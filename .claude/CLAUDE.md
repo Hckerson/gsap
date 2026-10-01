@@ -8,9 +8,8 @@ This is a reusable **Next.js App Router starter**. It ships architecture, conven
 2. **No hardcoding.** API routes, durations, enums, copy that appears twice — all live in `lib/constants.ts` or feature-scoped `lib/<feature>/constants.ts`. Use `config.api.*` for endpoints, `lib/motion.ts` for timing, Zod schemas for shapes.
 3. **No `any` in TypeScript.** Use `unknown` + narrowing or precise types. Derive types from Zod with `z.infer`.
 4. **Match the existing architecture.** Do not invent new patterns. Preserve abstractions. Before deviating from STYLE.md, explain why.
-5. **Use the framework natively.** Reach for Next.js features and libs already in use (Query / Zustand / Zod / motion / CSS `clamp()`) before adding dependencies. Build what the tool already does.
-6. **Single source of truth.** Name recurring decisions once as a semantic token and reference it everywhere. Define once, change in one place.
-7. **Minimize LOC.** Prefer the shorter solution when equally maintainable.
+5. **Single source of truth.** Name recurring decisions once as a semantic token and reference it everywhere. Define once, change in one place.
+6. **Minimize LOC.** Prefer the shorter solution when equally maintainable.
 
 ## Required patterns
 
